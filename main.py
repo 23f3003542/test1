@@ -1,6 +1,12 @@
+from flask import Flask 
+
+app = Flask(__name__)
+
+@app.route("/")
 def main():
-    print("Hello from test1!")
+    return "Hello from test1!"
+
 
 
 if __name__ == "__main__":
-    main()
+    app.run(debug=True,port=5000)
